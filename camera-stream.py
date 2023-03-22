@@ -8,7 +8,7 @@ def main():
 
     picam2 = Picamera2()
     picam2.start_preview(Preview.QTGL)
-    config = picam2.create_video_configuration(controls={"FrameDurationLimits": (8300, 40000)}) # 120-25 fps
+    config = picam2.create_video_configuration(controls={"FrameDurationLimits": (8300, 8300)}) # 120 fps - this is the max
     picam2.configure(config)
 
     picam2.start()
