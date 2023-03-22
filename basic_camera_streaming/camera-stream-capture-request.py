@@ -2,7 +2,7 @@
 # This should prevent it dropping some frames. For example you could capture the frame
 # and print it somewhere every 5 seconds as opposed to constantly streaming the video.
 
-from picamera2 import Picamera
+from picamera2 import Picamera2
 
 def main():
     picam2 = Picamera2()
