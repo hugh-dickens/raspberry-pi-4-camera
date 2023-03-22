@@ -137,8 +137,6 @@ def main():
     config_preview = picam2.create_preview_configuration(main={"size": normalSize},
                                                  lores={"size": lowresSize, "format": "YUV420"})
     picam2.configure(config_preview)
-    config_video = picam2.create_video_configuration(controls={"FrameDurationLimits": (8300, 8300)}) # 120 fps - this is the max
-    picam2.configure(config_video)
 
     stride = picam2.stream_configuration("lores")["stride"]
     picam2.post_callback = DrawRectangles
